@@ -18,5 +18,14 @@ class AgaPalindromeTest < Minitest::Test
     assert "Madam, I'm Adam".palindrome?
   end
 
+  def test_integer_palidrome
+    assert 12421.palindrome?
+  end
+
+  def test_integer_non_palindrome
+    refute 1245.palindrome?
+  end
+
+
 
 end
