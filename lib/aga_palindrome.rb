@@ -7,10 +7,20 @@ class String
     processed_content == processed_content.reverse
   end
 
+  def letters
+    the_letters = []
+    for i in 0..self.length-1 do
+      if (self[i].match(/[a-z]/i))
+        the_letters << self[i]
+      end
+    end
+    the_letters.join
+  end
+
   private
 
     # Returns content for palindrome testing.
     def processed_content
-      self.downcase
+      self.letters.downcase
     end
 end
